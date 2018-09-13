@@ -1,0 +1,48 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcular Trinagulo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		function clique()
+		{
+			var lado10 = parseInt(document.triangulo.lado1.value);
+			var lado20 = parseInt(document.triangulo.lado2.value);
+			var lado30 = parseInt(document.triangulo.lado3.value);
+			if(lado10>= lado20+lado30)
+			{
+				document.triangulo.soma.value = ("o triângulo é retângulo");
+			}
+			else if (lado10*lado10 == (lado20*lado20)+(lado30*lado30))
+			{
+				document.triangulo.soma.value = ("o triângulo é retângulo");
+
+			}
+				else if (lado10*lado10 > (lado20*lado20)+(lado30*lado30))
+			{
+				document.triangulo.soma.value = ("o triângulo é obtusângulo");
+			}
+				else if (lado10*lado10 < (lado20*lado20)+(lado30*lado30))
+			{
+				document.triangulo.soma.value = ("o triângulo é acutângulo");
+			}
+		}
+	</script>
+	<h1>CALCULAR TRIANGULO</h1>
+	<fieldset>
+	<legend><h3>Entrar com valores de um triangulo</h3></legend>
+	<form name="triangulo">
+		Lado 1:<input type="text" name="lado1" size="3px">
+		Lado 2:<input type="text" name="lado2" size="3px">
+		Lado 3:<input type="text" name="lado3" size="3px"><br><br>
+		<input type="button" value="Calcular" onClick="clique()">
+		Resultado:<input type="text" name="soma" style="width: 300px; height: 50px; font-size: 20px;">
+	</form>
+	</fieldset>
+	
+
+</body>
+</html>
